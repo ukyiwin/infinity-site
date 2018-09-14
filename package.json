@@ -1,0 +1,20 @@
+{
+  "name": "Infinity",
+  "description": "Manage your finances with ease",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "bukinoshita/infinity-site",
+  "author": "bukinoshita <bukinoshita@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "next build",
+    "dev": "next",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^6.1.2",
+    "polished": "^2.0.3",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1"
+  }
+}
