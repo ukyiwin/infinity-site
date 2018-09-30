@@ -1,6 +1,8 @@
+// Packages
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
+const withOffline = require('next-offline')
 
-module.exports = {
+module.exports = withOffline({
   webpack: config => {
     config.plugins.push(
       new SWPrecacheWebpackPlugin({
@@ -18,4 +20,4 @@ module.exports = {
 
     return config
   }
-}
+})
