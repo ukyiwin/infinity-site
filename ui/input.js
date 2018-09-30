@@ -1,5 +1,5 @@
 // Packages
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment } from 'react'
 import classnames from 'classnames'
 
 // Helpers
@@ -22,7 +22,7 @@ class Input extends PureComponent {
     })
 
     return (
-      <>
+      <Fragment>
         <input
           className={classname}
           type={type}
@@ -58,7 +58,7 @@ class Input extends PureComponent {
             padding: ${designTokens.spacing.medium};
           }
         `}</style>
-      </>
+      </Fragment>
     )
   }
 }
