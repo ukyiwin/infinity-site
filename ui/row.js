@@ -1,8 +1,24 @@
 // Packages
-import React from 'react'
+import React, { PureComponent } from 'react'
 
-const Row = ({ children, size }) => {
-  return <div>{children}</div>
+class Row extends PureComponent {
+  render() {
+    const { children, size } = this.props
+
+    return (
+      <div>
+        {children}
+
+        <style jsx>{`
+          div {
+            max-width: ${size};
+            margin-left: auto;
+            margin-right: auto;
+          }
+        `}</style>
+      </div>
+    )
+  }
 }
 
 Row.defaultProps = {

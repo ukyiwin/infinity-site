@@ -20,7 +20,6 @@ const App = ({ children }) => {
         <title>
           {pkg.name} — {pkg.description}
         </title>
-        <description>{pkg.description}</description>
       </Head>
 
       {children}

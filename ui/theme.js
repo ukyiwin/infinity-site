@@ -84,8 +84,9 @@ const colors = {
     darker: darken('0.1', primary)
   }),
   secondary: '#A4A8B3',
-  black: '#1A112E',
+  black: '#0e1012',
   white: '#ffffff',
+  gray: '#17191b',
   red: Object.assign(red, {
     lighter: lighten('0.2', red),
     light: lighten('0.1', red),

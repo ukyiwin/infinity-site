@@ -1,5 +1,5 @@
 {
-  "name": "Infinity",
+  "name": "infinity",
   "description": "Manage your finances with ease",
   "version": "0.0.0-canary.0",
   "main": "index.js",
@@ -7,14 +7,42 @@
   "author": "bukinoshita <bukinoshita@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "next start",
     "build": "next build",
     "dev": "next",
-    "start": "next start"
+    "lint": "xo",
+    "precommit": "lint-staged"
   },
   "dependencies": {
-    "next": "^6.1.2",
+    "classnames": "^2.2.6",
+    "next": "^7.0.1",
     "polished": "^2.0.3",
     "react": "^16.5.1",
     "react-dom": "^16.5.1"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.0.1",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3",
+    "xo": "^0.23.0"
+  },
+  "xo": {
+    "extends": [
+      "prettier",
+      "prettier/react",
+      "plugin:react/recommended"
+    ],
+    "rules": {
+      "react/prop-types": 0
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --semi false --single-quote --write",
+      "yarn lint",
+      "git add"
+    ]
   }
 }

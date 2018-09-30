@@ -4,28 +4,49 @@ import React from 'react'
 // Layouts
 import App from '../layouts/app'
 
+// Helpers
+import { SIZE_LARGE } from '../helpers/constants'
+
 // UI
+import Row from '../ui/row'
+import Logo from '../ui/logo'
+import Button from '../ui/button'
+import Input from '../ui/input'
 import { colors, designTokens } from '../ui/theme'
 
 const Home = () => {
   return (
     <App>
-      <main>
-        <div>
-          <svg width="160px" viewBox="0 0 24 24">
-            <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-              <path
-                d="M12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 Z M12,20.8 C16.8601058,20.8 20.8,16.8601058 20.8,12 C20.8,7.1398942 16.8601058,3.2 12,3.2 C7.1398942,3.2 3.2,7.1398942 3.2,12 C3.2,16.8601058 7.1398942,20.8 12,20.8 Z"
-                fill={colors.white}
-              />
-            </g>
-          </svg>
+      <Row>
+        <main>
+          <div>
+            <Logo />
 
-          <h1>
-            Manage your finances <br /> with ease.
-          </h1>
-        </div>
-      </main>
+            <h1>
+              manage your <br />
+              finances with ease.
+            </h1>
+
+            <h2>it’s never been that easy to understand about your finances</h2>
+
+            <form>
+              <Input
+                type="email"
+                placeholder="Your e-mail address"
+                size={SIZE_LARGE}
+                style={{ minWidth: '400px' }}
+              />
+
+              <Button
+                size={SIZE_LARGE}
+                style={{ marginLeft: designTokens.spacing.medium }}
+              >
+                Join beta
+              </Button>
+            </form>
+          </div>
+        </main>
+      </Row>
 
       <style jsx>{`
         main {
@@ -33,7 +54,6 @@ const Home = () => {
           min-height: 100vh;
           align-items: center;
           width: 100%;
-          text-align: center;
         }
 
         div {
@@ -41,11 +61,20 @@ const Home = () => {
         }
 
         h1 {
-          font-size: 100px;
+          font-size: 60px;
           color: ${colors.white};
           letter-spacing: -4px;
-          margin-top: ${designTokens.spacing.xxxLarge};
+          margin-top: ${designTokens.spacing.large};
+          margin-bottom: 24px;
           display: block;
+        }
+
+        h2 {
+          color: #b4b4b4;
+          font-size: 20px;
+          font-weight: 500;
+          margin-top: 0;
+          margin-bottom: 48px;
         }
       `}</style>
     </App>
