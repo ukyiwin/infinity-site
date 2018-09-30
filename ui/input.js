@@ -42,6 +42,7 @@ class Input extends PureComponent {
             box-shadow: ${designTokens.shadow};
             padding: ${designTokens.spacing} ${designTokens.spacing.medium};
             background: transparent;
+            max-width: 100%;
           }
 
           .primary {

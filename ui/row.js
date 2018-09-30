@@ -1,6 +1,9 @@
 // Packages
 import React, { PureComponent } from 'react'
 
+// UI
+import { designTokens } from './theme'
+
 class Row extends PureComponent {
   render() {
     const { children, size } = this.props
@@ -14,6 +17,8 @@ class Row extends PureComponent {
             max-width: ${size};
             margin-left: auto;
             margin-right: auto;
+            padding-left: ${designTokens.spacing.large};
+            padding-right: ${designTokens.spacing.large};
           }
         `}</style>
       </div>

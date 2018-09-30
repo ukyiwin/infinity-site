@@ -34,7 +34,7 @@ const Home = () => {
                 type="email"
                 placeholder="Your e-mail address"
                 size={SIZE_LARGE}
-                style={{ minWidth: '400px' }}
+                style={{ width: '400px' }}
               />
 
               <Button
