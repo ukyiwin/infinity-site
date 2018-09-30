@@ -1,4 +1,5 @@
 {
   "name": "infinity",
-  "alias": "infinity"
+  "alias": "infinity",
+  "type": "docker"
 }
