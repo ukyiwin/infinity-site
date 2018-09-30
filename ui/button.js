@@ -55,6 +55,14 @@ class Button extends PureComponent {
             padding: ${designTokens.spacing.medium}
               ${designTokens.spacing.xLarge};
           }
+
+          @media ${designTokens.responsive.phone} {
+            button {
+              display: block;
+              width: 100%;
+              margin: ${designTokens.spacing.medium} 0 !important;
+            }
+          }
         `}</style>
       </button>
     )
