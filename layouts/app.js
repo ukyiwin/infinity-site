@@ -20,12 +20,6 @@ const App = ({ children }) => {
         <title>
           {pkg.name} — {pkg.description}
         </title>
-        <link rel="manifest" href="static/manifest.json" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charSet="utf-8" />
-        <meta name="theme-color" content="#0e1012" />
-        <meta name="description" content={pkg.description} />
-        <meta name="keywords" content={pkg.keywords} />
       </Head>
 
       {children}
