@@ -62,7 +62,10 @@ class Home extends PureComponent {
     } catch (error) {
       console.error(error)
       this.setState({
-        hint: { type: 'red', message: 'Something went wrong' }
+        hint: {
+          type: 'red',
+          message: 'Something went wrong, please try again!'
+        }
       })
     }
   }
@@ -82,7 +85,7 @@ class Home extends PureComponent {
               </h1>
 
               <h2>
-                it’s never been that easy to understand about your finances
+                It’s never been that easy to understand about your finances
               </h2>
 
               <form onSubmit={this.onSubmit}>
