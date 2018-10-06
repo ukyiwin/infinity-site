@@ -20,6 +20,12 @@ const App = ({ children }) => {
         <title>
           {pkg.name} — {pkg.description}
         </title>
+        <link rel="manifest" href="static/manifest.json" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+        <meta name="theme-color" content="#0e1012" />
+        <meta name="description" content={pkg.description} />
+        <meta name="keywords" content={pkg.keywords} />
       </Head>
 
       {children}
@@ -47,6 +53,7 @@ const App = ({ children }) => {
 
         body {
           margin: 0;
+          padding: 0;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
             Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
             'Segoe UI Symbol';
@@ -55,6 +62,11 @@ const App = ({ children }) => {
 
         hr {
           height: 0;
+        }
+
+        fieldset {
+          border: none;
+          padding: 0;
         }
 
         abbr[title] {
@@ -132,10 +144,6 @@ const App = ({ children }) => {
         [type='reset']:-moz-focusring,
         [type='submit']:-moz-focusring {
           outline: 1px dotted ButtonText;
-        }
-
-        fieldset {
-          padding: 0.35em 0.75em 0.625em;
         }
 
         legend {

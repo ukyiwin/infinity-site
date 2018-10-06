@@ -22,7 +22,7 @@ class Button extends PureComponent {
     })
 
     return (
-      <button className={classname} type={type} style={style}>
+      <button className={classname} type={type} aria-label={type} style={style}>
         {children}
 
         <style jsx>{`

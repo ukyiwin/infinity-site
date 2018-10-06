@@ -1,5 +1,9 @@
 {
   "name": "infinity",
   "alias": "infinity",
-  "type": "docker"
+  "type": "docker",
+  "env": {
+    "NODE_ENV": "production",
+    "API_URL": "@infinity-api-url"
+  }
 }

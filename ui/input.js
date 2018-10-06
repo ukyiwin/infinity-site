@@ -1,6 +1,7 @@
 // Packages
-import React, { PureComponent, Fragment } from 'react'
+import React, { PureComponent } from 'react'
 import classnames from 'classnames'
+import { If } from 'react-extras'
 
 // Helpers
 import {
@@ -14,21 +15,45 @@ import { typography, colors, designTokens } from './theme'
 
 class Input extends PureComponent {
   render() {
-    const { type, appearance, size, placeholder, style } = this.props
+    const {
+      type,
+      appearance,
+      size,
+      placeholder,
+      name,
+      value,
+      onChange,
+      hint,
+      style
+    } = this.props
 
-    const classname = classnames({
+    const inputClassname = classnames({
       primary: appearance === APPEARANCE_PRIMARY,
       large: size === SIZE_LARGE
     })
 
+    const hintClassname = classnames({
+      hint,
+      'hint--green': hint && hint.type ? hint.type === 'green' : '',
+      'hint--red': hint && hint.type ? hint.type === 'red' : ''
+    })
+
     return (
-      <Fragment>
+      <fieldset>
         <input
-          className={classname}
+          className={inputClassname}
           type={type}
+          name={name}
           placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+          aria-label={name}
           style={style}
         />
+
+        <If condition={Boolean(hint && hint.message)}>
+          <span className={hintClassname}>{hint.message}</span>
+        </If>
 
         <style jsx>{`
           input {
@@ -57,8 +82,21 @@ class Input extends PureComponent {
             font-weight: ${typography.h500.fontWeight};
             padding: ${designTokens.spacing.medium};
           }
+
+          .hint {
+            display: table;
+            margin-top: ${designTokens.spacing};
+          }
+
+          .hint--green {
+            color: ${colors.green};
+          }
+
+          .hint--red {
+            color: ${colors.red};
+          }
         `}</style>
-      </Fragment>
+      </fieldset>
     )
   }
 }
