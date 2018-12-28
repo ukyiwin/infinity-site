@@ -17,8 +17,7 @@
     "start": "NODE_ENV=production node server",
     "build": "next build",
     "dev": "node server",
-    "lint": "xo",
-    "precommit": "lint-staged"
+    "lint": "xo --quiet"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -59,5 +58,10 @@
       "yarn lint",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
