@@ -128,7 +128,7 @@ class Home extends PureComponent {
           h1 {
             font-size: 60px;
             color: ${colors.white};
-            letter-spacing: -4px;
+            letter-spacing: -2px;
             margin-top: ${designTokens.spacing.large};
             margin-bottom: 24px;
             display: block;
