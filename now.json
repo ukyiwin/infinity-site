@@ -1,7 +1,11 @@
 {
   "name": "infinity",
   "alias": "infinity",
-  "type": "docker",
+  "version": 2,
+  "builds": [
+    { "src": "next.config.js", "use": "@now/next" },
+    { "src": "server.js", "use": "@now/node" }
+  ],
   "env": {
     "NODE_ENV": "production",
     "API_URL": "@infinity-api-url"
