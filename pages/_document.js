@@ -29,6 +29,26 @@ export default class MyDocument extends Document {
           <meta name="description" content={pkg.description} />
           <meta name="keywords" content={pkg.keywords} />
 
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@bukinoshita" />
+          <meta name="twitter:creator" content="@bukinoshita" />
+          <meta name="twitter:title" content={pkg.name} />
+          <meta name="twitter:description" content={pkg.description} />
+          <meta
+            property="twitter:image:src"
+            content={`${ASSETS_URL}/infinity-cover/infinity.png`}
+          />
+
+          <meta property="og:url" content="https://infinity.now.sh" />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content={pkg.name} />
+          <meta
+            property="og:image"
+            content={`${ASSETS_URL}/infinity-cover/infinity.png`}
+          />
+          <meta property="og:description" content={pkg.description} />
+          <meta property="og:site_name" content={pkg.name} />
+
           <link
             rel="apple-touch-icon"
             href={`${ASSETS_URL}/infinity-favicon/infinity-favicon@64x64.png`}
