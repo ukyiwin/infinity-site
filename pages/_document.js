@@ -1,12 +1,16 @@
 // Packages
 import React from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
+import getConfig from 'next/config'
 
 // Root
 import pkg from '../package'
 
 // UI
 import { colors } from '../ui/theme'
+
+const { publicRuntimeConfig } = getConfig()
+const { ASSETS_URL } = publicRuntimeConfig
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -24,6 +28,16 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content={colors.black} />
           <meta name="description" content={pkg.description} />
           <meta name="keywords" content={pkg.keywords} />
+
+          <link
+            rel="apple-touch-icon"
+            href={`${ASSETS_URL}/infinity-favicon/infinity-favicon@64x64.png`}
+          />
+          <link
+            rel="icon"
+            href={`${ASSETS_URL}/infinity-favicon/infinity-favicon@64x64.png`}
+            type="image/png"
+          />
         </Head>
 
         <body>

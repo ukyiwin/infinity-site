@@ -6,7 +6,8 @@ require('dotenv').config()
 
 module.exports = withOffline({
   publicRuntimeConfig: {
-    API_URL: process.env.API_URL
+    API_URL: process.env.API_URL,
+    ASSETS_URL: process.env.ASSETS_URL
   },
   webpack: config => {
     config.plugins.push(
