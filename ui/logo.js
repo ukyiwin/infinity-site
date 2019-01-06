@@ -1,5 +1,6 @@
 // Packages
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 
 class Logo extends PureComponent {
   render() {
@@ -21,6 +22,11 @@ class Logo extends PureComponent {
 Logo.defaultProps = {
   size: '70px',
   color: 'white'
+}
+
+Logo.propTypes = {
+  size: PropTypes.string,
+  color: PropTypes.string
 }
 
 export default Logo

@@ -2,6 +2,7 @@
 import React, { PureComponent } from 'react'
 import classnames from 'classnames'
 import { If } from 'react-extras'
+import PropTypes from 'prop-types'
 
 // Helpers
 import {
@@ -104,6 +105,11 @@ class Input extends PureComponent {
 Input.defaultProps = {
   appearance: APPEARANCE_PRIMARY,
   size: SIZE_MEDIUM
+}
+
+Input.propTypes = {
+  appearance: PropTypes.string,
+  size: PropTypes.string
 }
 
 export default Input

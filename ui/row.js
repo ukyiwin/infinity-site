@@ -1,5 +1,6 @@
 // Packages
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 
 // UI
 import { designTokens } from './theme'
@@ -28,6 +29,10 @@ class Row extends PureComponent {
 
 Row.defaultProps = {
   size: '1200px'
+}
+
+Row.propTypes = {
+  size: PropTypes.string
 }
 
 export default Row

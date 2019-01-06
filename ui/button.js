@@ -1,6 +1,7 @@
 // Packages
 import React, { PureComponent } from 'react'
 import classnames from 'classnames'
+import PropTypes from 'prop-types'
 
 // Helpers
 import {
@@ -72,6 +73,11 @@ class Button extends PureComponent {
 Button.defaultProps = {
   appearance: APPEARANCE_PRIMARY,
   size: SIZE_MEDIUM
+}
+
+Button.propTypes = {
+  appearance: PropTypes.string,
+  size: PropTypes.string
 }
 
 export default Button

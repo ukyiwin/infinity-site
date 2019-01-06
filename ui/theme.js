@@ -1,5 +1,3 @@
-'use strict'
-
 import { darken, lighten } from 'polished'
 
 const typography = {
